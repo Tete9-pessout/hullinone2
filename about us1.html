@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Security Page</title>
+    <!-- ربط ملف CSS الخارجي لتنسيق الصفحة -->
+    <link rel="stylesheet" href="ALL.CSS">
+</head>
+
+<body>
+
+    <div class="content">
+        <header>
+            <nav>
+                <!-- قائمة التنقل بين الصفحات -->
+                <a href="index.html">Home</a>
+                <br><br>
+                <a href="product1.html">Products</a>
+                <br>
+                <a href="servece1.html">Services</a>
+                <br><br>
+                <a href="Counctus.html">Contact us</a>
+                <br><br>
+                <!-- شعار الموقع -->
+                <img src="Hole_in_One__1_-removebg-preview.png" width="60">
+                <br><br>
+                <a href="about us1.html">About us</a>
+                <br><br>
+                <a href="Golf Booking Form.html">Booking</a>
+                <br><br>
+                <a href="provided facilities.html">Facilities provided</a>
+                <br><br>
+                <a href="imge centre.html">Photo gallery</a>
+
+                <!-- أزرار التحكم في تكبير الصفحة -->
+                <button onclick="document.body.style.zoom='100%'">Zoom 100</button>
+                <button onclick="document.body.style.zoom='175%'">Zoom 175</button>
+                <button onclick="document.body.style.zoom='150%'">Zoom 150</button>
+            </nav>
+        </header>
+
+        <!-- عرض معلومات المدير التنفيذي والموظفين -->
+        <div class="container">
+            <div class="boss">
+                <!-- صورة المدير التنفيذي -->
+                <img src="6.jpg" alt="Boss">
+                <p>CEO <br> Alexandr Knight</p>
+            </div>
+            <div class="employees">
+                <!-- صور الموظفين مع أسمائهم ومناصبهم -->
+                <div class="employee">
+                    <img src="3.jpg" alt="Employee 1">
+                    <p>CPM <br> Damien Stone</p>
+                </div>
+                <div class="employee">
+                    <img src="4.jpg" alt="Employee 2">
+                    <p>SMTS <br> Joon-Ho</p>
+                </div>
+                <div class="employee">
+                    <img src="1.jpg" alt="Employee 3">
+                    <p>CPR <br> Soo-Min</p>
+                </div>
+                <div class="employee">
+                    <img src="5.jpg" alt="Employee 4">
+                    <p>HPF <br> Sung-Jin</p>
+                </div>
+                <div class="employee">
+                    <img src="7.jpg" alt="Employee 5">
+                    <p>ERP <br> Logan Pierce</p>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            /* تنسيق الصفحة */
+            body {
+                padding-top: -1vh;
+
+            }
+
+            /* تنسيق الحاوية الرئيسية */
+            .container {
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            /* تنسيق صور الموظفين والمدير التنفيذي */
+            .boss,
+            .employee {
+                margin-bottom: 20px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .boss img,
+            .employee img {
+                width: 150px;
+                height: 150px;
+                transition: transform 0.3s ease;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .boss p,
+            .employee p {
+                font-size: 16px;
+                color: #333;
+                font-weight: bold;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            /* ترتيب الموظفين بشكل أفقي */
+            .employees {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .employee {
+                flex: 1;
+            }
+
+            /* تأثير التكبير عند تمرير الماوس */
+            .boss img:hover,
+            .employee img:hover {
+                transform: scale(1.1);
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
+
+        <!-- تضمين مكتبة FontAwesome لأيقونات وسائل التواصل الاجتماعي -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+
+        <!-- شريط وسائل التواصل الاجتماعي -->
+        <div class="social-bar">
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.whatsapp.com" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

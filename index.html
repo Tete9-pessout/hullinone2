@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<head>
+    <title>HOLE IN ONE</title>
+    <!-- ربط ملف CSS لتنسيق الصفحة -->
+    <link rel="stylesheet" href="ALL.CSS">
+</head>
+
+<body>
+
+    <!-- إدراج فيديو كخلفية للصفحة -->
+    <video autoplay muted loop id="bgVideo">
+        <source src="Blue and White Animated Get Ready Video.mp4" type="video/mp4">
+    </video>
+
+    <div class="content">
+        <header>
+            <nav>
+                <!-- روابط التنقل بين صفحات الموقع -->
+                <a href="index.html">Home</a>
+                <br><br>
+                <a href="product1.html">Products</a>
+                <br><br>
+                <a href="servece1.html">Services</a>
+                <br><br>
+                <a href="Counctus.html">Contact us</a>
+                <br><br>
+                
+                <!-- إدراج شعار الموقع -->
+                <img src="Hole_in_One__1_-removebg-preview.png" width="60"> 
+                <br><br>
+
+                <a href="about us1.html">About us</a>
+                <br><br>
+                <a href="Golf Booking Form.html">Booking</a>
+                <br><br>
+                <a href="provided facilities.html">Facilities provided</a>
+                <br><br>
+                <a href="imge centre.html">Photo gallery</a>
+
+                <!-- أزرار تكبير وتصغير محتوى الصفحة -->
+                <button onclick="body.style.zoom='100%'" id="zoom-100">zoom 100</button>
+                <button onclick="body.style.zoom='175%'" id="zoom-175">zoom 175</button>
+                <button onclick="body.style.zoom='150%'" id="zoom-150">zoom 150</button> 
+            </nav>
+        </header>
+    
+        <!-- زر للانتقال إلى صفحة الخدمات -->
+        <button onclick="document.location='servece1.html'" id="special-button">Start Your Journey</button>
+
+        <style>
+            /* تنسيق الفيديو ليكون كخلفية ممتدة */
+            #bgVideo {
+                position: absolute;
+                top: 58px; 
+                width: 100%;
+                height: calc(100% - 60px); 
+                object-fit: cover; 
+            }
+
+            body{
+                padding-bottom: 1vh;
+                padding-top: 1vh;
+                overflow: hidden;
+            }
+
+            /* تنسيق زر "ابدأ رحلتك" */
+            #special-button {
+                background-color: #2e2e2ec1;
+                color: white;
+                cursor: pointer;
+                width: 100px; 
+                height: 50px; 
+                border-radius: 50%;
+                position: fixed;
+                bottom: 60px; 
+                right: 59%; 
+                transform: translateX(-50%);
+                font-size: 12px; 
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-weight: 700; 
+                border: none;
+            }
+
+            /* تغيير لون الزر عند تمرير المؤشر عليه */
+            #special-button:hover {
+                background-color: #444;
+            }
+        </style>
+
+        <!-- استيراد مكتبة Font Awesome لاستخدام الأيقونات -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+
+        <!-- شريط وسائل التواصل الاجتماعي -->
+        <div class="social-bar">
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.whatsapp.com" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    
+    </div>
+    
+</body>
+</html>
+
+
+
+
+

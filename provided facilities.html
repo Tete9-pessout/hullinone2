@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HOLE IN ONE</title>
+    <!-- ربط ملف CSS الخارجي لتنسيق الصفحة -->
+    <link rel="stylesheet" href="ALL.CSS">
+
+    <!-- ضبط الترميز وضبط الصفحة على جميع الأجهزة -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Golf Facilities</title>
+
+</head>
+
+<body>
+    <style>
+        /* تنسيق عام للصفحة */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #74747b82;
+            text-align: center;
+            padding-bottom: 40vh;
+        }
+
+        /* تنسيق الحاوية الخاصة بالمرافق */
+        .facilities-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* السماح بتوزيع العناصر في أسطر متعددة عند الحاجة */
+            margin: 40px 10px;
+            gap: 20px; /* مسافة بين المرافق*/
+        }
+
+        /* تنسيق صندوق المرافق */
+        .facility-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+            transition: transform 0.3s; /* تأثير التحويل عند التحويم */
+            
+        }
+
+        /* تأثير التحويل عند تحويم الفأرة على الصندوق */
+        .facility-box:hover {
+            transform: scale(1.05);
+        }
+
+        /* تنسيق الصور داخل صناديق المرافق */
+        .facility-box img {
+            width: 100%;
+            height: 180px;
+            border-radius: 10px;
+            transition: transform 0.5s;
+        }
+        /* تأثير التكبير عند تمرير الماوس على الصورة */
+        .facility-box:hover img {
+            transform: scale(1.1);
+        }
+
+        /* تنسيق عناوين المرافق */
+        .facility-box h2 {
+            font-size: 20px;
+            color: #333;
+            margin: 15px 0;
+        }
+
+        /* تنسيق الفقرة داخل صندوق المرافق */
+        .facility-box p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* تنسيق زر "Learn More" */
+        .learn-more-btn {
+            background-color: #218838;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+  
+
+
+        /* تغيير لون الزر عند تمرير الماوس عليه */
+        .learn-more-btn:hover {
+            background-color: #1a682e;
+        }
+        .facility-box{
+            margin-top: -600px;
+            height: 400px;
+        }
+
+
+    </style>
+
+
+
+
+    <div class="content">
+        <header>
+            <nav>
+                <!-- قائمة التنقل -->
+                <a href="index.html">Home</a>
+                <br><br>
+                <a href="product1.html">Products</a>
+                <br>
+                <a href="servece1.html">Services</a>
+                <br><br>
+                <a href="Counctus.html">Contact us</a>
+                <br><br>
+                <!-- شعار الموقع -->
+                <img src="Hole_in_One__1_-removebg-preview.png" width="100">
+                <br><br>
+                <a href="about us1.html">About us</a>
+                <br><br>
+                <a href="Golf Booking Form.html">Booking</a>
+                <br><br>
+                <a href="provided facilities.html">Facilities provided</a>
+                <br><br>
+                <a href="imge centre.html">Photo gallery</a>
+
+                <!-- أزرار التحكم في التكبير -->
+                <button onclick="document.body.style.zoom='100%'">Zoom 100</button>
+                <button onclick="document.body.style.zoom='175%'">Zoom 175</button>
+                <button onclick="document.body.style.zoom='150%'">Zoom 150</button>
+            </nav>
+        </header>
+    </div>
+
+    <!-- قسم عرض المرافق -->
+    <div class="facilities-container">
+        <!-- المرفق الأول: منطقة التدريب -->
+        <div class="facility-box">
+            <img src="DALL·E 2025-03-05 09.42.50 - A scenic golf course with lush green fairways, sand bunkers, and a calm water hazard. The landscape is surrounded by rolling hills and tall trees unde.webp" alt="Driving Range">
+            <h2>Stadiums</h2>
+            <p>Three championship golf courses including the famous "Sea View".
+
+                Two clubs 
+                
+                A training field illuminated by the lights of scouts 
+                
+                Golf lessons</p>
+            <button class="learn-more-btn" onclick="document.location='Golf Booking Form.html'">Learn More</button>
+        </div>
+
+        <!-- المرفق الثاني: النادي -->
+        <div class="facility-box">
+            <img src="DALL·E 2025-03-05 10.10.35 - A luxurious hotel exterior with grand architecture, large glass windows, and a welcoming entrance. The hotel is surrounded by palm trees and elegant l.webp" alt="Clubhouse">
+            <h2>Places to stay</h2>
+            <p>Hotel accommodation and luggage assistance.</p>
+            <button class="learn-more-btn" onclick="document.location='Golf Booking Form.html'">Learn More</button>
+        </div>
+
+        <!-- المرفق الثالث: ملعب الجولف -->
+        <div class="facility-box">
+            <img src="DALL·E 2025-03-05 10.19.02 - A stylish and modern restaurant interior with elegant wooden tables, cozy lighting, and a welcoming atmosphere. The restaurant features a mix of conte.webp" alt="Golf Course">
+            <h2>Places to rest</h2>
+            <p>Restaurants, cafes and a pro shop</p>
+            <button class="learn-more-btn" onclick="document.location='Golf Booking Form.html'">Learn More</button>
+        </div>
+    </div>
+
+    <!-- تحميل مكتبة FontAwesome لإضافة أيقونات وسائل التواصل الاجتماعي -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+
+    <!-- شريط وسائل التواصل الاجتماعي -->
+    <div class="social-bar">
+        <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.whatsapp.com" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+</body>
+
+</html>
+

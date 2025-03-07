@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<head>
+    <title>HOLE IN ONE</title>
+    <link rel="stylesheet" href="ALL.CSS"> <!-- ربط ملف CSS الخارجي لتنسيق الصفحة -->
+</head>
+
+<body>
+    <div class="content">
+        <header>
+            <nav> <!-- قائمة التنقل -->
+                <a href="index.html">Home</a> <!-- رابط الصفحة الرئيسية -->
+                <br><br>
+                <a href="product1.html">Products</a> <!-- رابط صفحة المنتجات -->
+                <br>
+                <a href="servece1.html">Services</a> <!-- خطأ إملائي: "servece1.html" يجب أن يكون "service1.html" -->
+                <br><br>
+                <a href="Counctus.html">Contact us</a> <!-- خطأ إملائي: "Counctus.html" يجب أن يكون "Contactus.html" -->
+                <br><br>
+                <img src="Hole_in_One__1_-removebg-preview.png" width="60"> <!-- شعار الموقع -->
+                <br><br>
+                <a href="about us1.html">About us</a> <!-- رابط صفحة "من نحن" -->
+                <br><br>
+                <a href="Golf Booking Form.html">Booking</a> <!-- رابط صفحة الحجز -->
+                <br><br>
+                <a href="provided facilities.html">Facilities provided</a> <!-- رابط صفحة المرافق المتاحة -->
+                <br><br>
+                <a href="imge centre.html">Photo gallery</a> <!-- خطأ إملائي: "imge centre.html" يجب أن يكون "image_center.html" -->
+
+                <!-- أزرار التكبير والتصغير -->
+                <button onclick="document.body.style.zoom='100%'">zoom 100</button>
+                <button onclick="document.body.style.zoom='175%'">zoom 175</button>
+                <button onclick="document.body.style.zoom='150%'">zoom 150</button>
+                <!-- كان هناك خطأ في استخدام `body.style.zoom`، يجب أن يكون `document.body.style.zoom` -->
+            </nav>
+        </header>
+
+        <h1>Our Services</h1> <!-- عنوان القسم -->
+        <div class="services-container"> <!-- حاوية تحتوي على الخدمات -->
+            <div class="service-box">
+                <img src="DALL·E 2025-03-05 09.17.18 - A luxurious golf resort with lush green fairways, a modern clubhouse, and scenic water features. The resort is surrounded by palm trees and has a clea.webp" alt="Service 1"> <!-- صورة الخدمة الأولى -->
+                <h3>Five rounds</h3>
+                <p>Full board for five nights in a luxury suite
+                    <br>
+
+                    Five rounds - 18 holes.
+                    <br>
+                    One round guaranteed at the famous Seaview Course.
+                    <br>
+                    Free digital training session.</p> <!-- وصف للخدمة -->
+            </div>
+
+            <div class="service-box">
+                <img src="DALL·E 2025-03-05 09.19.44 - A high-end golf resort with an expansive green course, elegant villas, and a luxurious clubhouse. The resort features a large outdoor swimming pool, p.webp" alt="Service 2"> <!-- صورة الخدمة الثانية -->
+                <h3>Triple round</h3>
+                <p>Two-night stay in a double room with breakfast .
+                          <br>
+                    Three rounds - 18 holes, including one round at the famous “Sea View” course (if it available).
+                    <br>
+                    Free car rental .
+                    <br>
+                    20% discount for the professional store.</p>
+            </div>
+
+            <div class="service-box">
+                <img src="DALL·E 2025-03-05 09.21.28 - A luxurious golf resort set in a picturesque landscape with rolling green fairways, an elegant clubhouse, and a sparkling lake. The resort is surround.webp" alt="Service 3"> <!-- صورة الخدمة الثالثة -->
+                <h3>Recreation break</h3>
+                <p>One night stay with full breakfast.
+                    <br>
+                    Have dinner at any of the resort's restaurants .
+                    <br>
+                    Access to the stadiums (fees apply and excludes Sea View Stadium).
+                    <br>
+                    Free club rental.</p>
+            </div>
+        </div>
+
+        <!-- زر الاتصال بنا -->
+        <button class="connect-button" onclick="document.location='Counctus.html'">Connect Us</button>
+        <!-- كان هناك خطأ إملائي في "Counctus.html"، الأفضل تغييره إلى "Contactus.html" -->
+        
+        <style>
+
+            body{
+                padding-bottom: 10vh;
+            }
+            /* تنسيق قسم الخدمات */
+            .services-container {
+                display: flex; /* عرض العناصر بجانب بعضها */
+                justify-content: center; /* محاذاة وسطية */
+                gap: 20px; /* المسافة بين الخدمات */
+                margin-top: 50px;
+            }
+
+            .service-box {
+                width: 300px;
+                padding: 20px;
+                background: white;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+
+            .service-box img {
+                width: 100%;
+                height: 200px;
+                border-radius: 10px;
+                animation: slide 5s infinite;
+            }
+
+            /* تأثير الحركة على الصور */
+            @keyframes slide {
+                0% { opacity: 0; }
+                50% { opacity: 1; }
+                100% { opacity: 0; }
+            }
+
+            /* تنسيق زر "اتصل بنا" */
+            .connect-button {
+                margin-top: 20px;
+                padding: 10px 20px;
+                background-color: #28a745; /* لون الزر الأخضر */
+                color: white;
+                border: none;
+                cursor: pointer;
+                font-size: 16px;
+                border-radius: 5px;
+            }
+
+            .connect-button:hover {
+                background-color: #218838; /* تغيير لون الزر عند التمرير */
+            }
+        </style>
+
+        <!-- تضمين مكتبة FontAwesome للأيقونات -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+
+        <!-- شريط وسائل التواصل الاجتماعي -->
+        <div class="social-bar">
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.whatsapp.com" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </body>
+</html>
+

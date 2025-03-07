@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HOLE IN ONE</title>
+    <!-- ربط ملف CSS الخارجي لتنسيق الصفحة -->
+    <link rel="stylesheet" href="ALL.CSS">
+</head>
+
+<body>
+
+    <div class="content">
+        <header>
+
+            <nav>
+                <!-- قائمة الروابط للتنقل بين الصفحات -->
+                <a href="index.html">Home</a>
+                <br><br>
+                <a href="product1.html">Products</a>
+                <br>
+                <a href="servece1.html">Services</a>
+                <br><br>
+                <a href="Counctus.html">Contact us</a>
+                <br><br>
+                <!-- شعار الموقع -->
+                <img src="Hole_in_One__1_-removebg-preview.png" width="60">
+                <br><br>
+                <a href="about us1.html">About us</a>
+                <br><br>
+                <a href="Golf Booking Form.html">Booking</a>
+                <br><br>
+                <a href="provided facilities.html">Facilities provided</a>
+                <br><br>
+                <a href="imge centre.html">Photo gallery</a>
+
+                <!-- أزرار لتغيير نسبة تكبير الصفحة -->
+                <button onclick="body.style.zoom='100%'">zoom 100</button>
+                <button onclick="body.style.zoom='175%'">zoom 175</button>
+                <button onclick="body.style.zoom='150%'">zoom 150</button>
+
+            </nav>
+
+        </header>
+
+        <title>Connect Us</title>
+        <style>
+            /* تنسيق الصفحة والخلفية */
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: #74747b82;
+                text-align: center;
+                padding-top: 6vh;
+                padding-bottom: 6vh;
+            }
+
+            /* شريط علوي يحتوي على رقم الهاتف */
+            .top-bar {
+                background-color: #28a745;
+                color: white;
+                padding: 15px;
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            .top-bar a {
+                color: white;
+                text-decoration: none;
+            }
+
+            /* تنسيق الحاوية الرئيسية */
+            .container {
+                max-width: 800px;
+                margin: 50px auto;
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            h1 {
+                color: #333;
+            }
+
+            /* تنسيق نموذج الاتصال */
+            .contact-form {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                margin-top: 20px;
+            }
+
+            /* تنسيق حقول الإدخال والقوائم المنسدلة */
+            input,
+            textarea,
+            select {
+                width: 700px;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+
+            /* تنسيق زر الإرسال */
+            .submit-button {
+                background-color: #28a745;
+                color: white;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+                font-size: 18px;
+                border-radius: 5px;
+            }
+
+            .submit-button:hover {
+                background-color: #218838;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- شريط علوي يعرض رقم الهاتف -->
+        <div class="top-bar">
+            📞 Call Us: <a href="tel:+1234567890">+1 234 567 890</a>
+        </div>
+
+        <!-- نموذج الاتصال -->
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We would love to hear from you! Please fill out the form below.</p>
+
+            <form class="contact-form" onsubmit="return submitForm(event)">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <input type="text" id="phone" placeholder="Your Phone Number" required>
+                <select id="subject" required>
+                    <option value="">Select a Subject</option>
+                    <option value="Inquiry">General Inquiry</option>
+                    <option value="Support">Customer Support</option>
+                    <option value="Feedback">Feedback</option>
+                </select>
+                <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+
+        <script>
+            // دالة لتنبيه المستخدم بعد إرسال النموذج وتصفيته
+            function submitForm(event) {
+                event.preventDefault();
+                alert("Thank you for contacting us! We will get back to you soon.");
+                document.querySelector(".contact-form").reset();
+            }
+        </script>
+
+        <!-- تضمين مكتبة FontAwesome لأيقونات وسائل التواصل -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+
+        <!-- شريط وسائل التواصل الاجتماعي -->
+        <div class="social-bar">
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.whatsapp.com" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- عنوان الصفحة -->
+    <title>HOLE IN ONE</title>
+    <!-- ربط ملف CSS الخارجي لتنسيق الصفحة -->
+    <link rel="stylesheet" href="ALL.CSS">
+</head>
+
+<body>
+
+    <div class="content">
+        <header>
+            <nav>
+                <!-- قائمة الروابط للتنقل بين الصفحات -->
+                <a href="index.html">Home</a>
+                <br><br>
+                <a href="product1.html">Products</a>
+                <br>
+                <a href="servece1.html">Services</a>
+                <br><br>
+                <a href="Counctus.html">Contact us</a>
+                <br><br>
+                <!-- شعار الموقع -->
+                <img src="Hole_in_One__1_-removebg-preview.png" width="60">
+                <br><br>
+                <a href="about us1.html">About us</a>
+                <br><br>
+                <a href="Golf Booking Form.html">Booking</a>
+                <br><br>
+                <a href="provided facilities.html">Facilities provided</a>
+                <br><br>
+                <a href="imge centre.html">Photo gallery</a>
+
+                <!-- أزرار تكبير الصفحة -->
+                <button onclick="document.body.style.zoom='100%'">Zoom 100</button>
+                <button onclick="document.body.style.zoom='175%'">Zoom 175</button>
+                <button onclick="document.body.style.zoom='150%'">Zoom 150</button>
+            </nav>
+        </header>
+
+        <style>
+            /* تنسيق عام للصفحة */
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: #74747b82;
+                text-align: center;
+                padding-top: 6vh;
+                padding-bottom: 20vh;
+            }
+
+            /* تنسيق الحاوية الرئيسية لحجز الجولف */
+            .booking-container {
+                width: 600px;
+                margin: 40px auto;
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                text-align: left;
+            }
+
+            /* تنسيق العنوان */
+            .booking-container h2 {
+                text-align: center;
+                color: #333;
+            }
+
+            /* تنسيق نموذج الحجز */
+            .booking-form {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            /* تنسيق الحقول داخل النموذج */
+            .booking-form input, .booking-form select {
+                width: 95%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+
+            /* تنسيق زر الإرسال */
+            .submit-button {
+                background-color: #28a745;
+                color: white;
+                border: none;
+                padding: 12px;
+                font-size: 18px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .submit-button:hover {
+                background-color: #218838;
+            }
+
+            /* تنسيق رسالة التأكيد بعد الحجز */
+            .confirmation-message {
+                display: none;
+                margin-top: 20px;
+                padding: 15px;
+                background: #d4edda;
+                color: #155724;
+                border-radius: 5px;
+                text-align: center;
+                font-size: 18px;
+            }
+
+            /* محاذاة المحتوى */
+            .content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                width: 100%; 
+                flex-direction: column;
+                margin-top: 100px;
+            }
+
+        </style>
+</head>
+<body>
+
+    <!-- حاوية نموذج الحجز -->
+    <div class="booking-container">
+        <h2>Golf Booking Form</h2>
+        <form class="booking-form" onsubmit="return submitBooking(event)">
+            <!-- إدخال الاسم -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <!-- إدخال البريد الإلكتروني -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <!-- إدخال رقم الهاتف -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+            <!-- اختيار تاريخ الحجز -->
+            <label for="date">Booking Date:</label>
+            <input type="date" id="date" required>
+
+            <!-- اختيار وقت اللعب -->
+            <label for="time">Preferred Time:</label>
+            <input type="time" id="time" required>
+
+            <!-- تحديد عدد اللاعبين -->
+            <label for="players">Number of Players:</label>
+            <input type="number" id="players" min="1" max="10" required>
+
+            <!-- تحديد الباقة -->
+            <label for="package">Select a Package:</label>
+            <select id="package">
+                <option value="Standard">Standard - $50</option>
+                <option value="Premium">Premium - $80</option>
+                <option value="VIP">VIP Experience - $120</option>
+            </select>
+
+            <!-- زر إرسال الطلب -->
+            <button type="submit" class="submit-button">Book Now</button>
+        </form>
+
+        <!-- رسالة تأكيد الحجز -->
+        <div class="confirmation-message" id="confirmationMessage">
+            ✅ Your booking has been confirmed! We look forward to seeing you on the course.
+        </div>
+    </div>
+
+    <script>
+        /* دالة لمعالجة نموذج الحجز عند الإرسال */
+        function submitBooking(event) {
+            event.preventDefault(); // منع إعادة تحميل الصفحة
+            document.getElementById("confirmationMessage").style.display = "block"; // إظهار رسالة التأكيد
+            document.querySelector(".booking-form").reset(); // إعادة تعيين الحقول بعد الإرسال
+        }
+    </script>
+
+    <!-- تحميل مكتبة FontAwesome لإضافة أيقونات وسائل التواصل الاجتماعي -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+
+    <!-- شريط وسائل التواصل الاجتماعي -->
+    <div class="social-bar">
+        <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.whatsapp.com" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+
+</body>
+</html>
+
